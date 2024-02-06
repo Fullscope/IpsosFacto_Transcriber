@@ -19,11 +19,13 @@ RUN git clone https://github.com/Fullscope/IpsosFacto_Transcriber.git
 
 
 # Install the required Python packages
-COPY requirements.txt ./
+COPY . .
 RUN pip install -r requirements.txt
 
 # Expose the default Streamlit port
 EXPOSE 8501
 
 # Set the entrypoint command to run the Streamlit app
-CMD ["streamlit", "run", "app.py"]
+HEALTHCHECK CMD curl --fail http://localhost:8501/_stcore/health
+
+ENTRYPOINT ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]
