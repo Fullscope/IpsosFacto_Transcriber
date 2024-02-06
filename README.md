@@ -1,13 +1,15 @@
 # Whisper in combination with GPT-3 and Streamlit 
 
-upload a audio file to generate a transcript using OpenAI WHisper
+Upload a audio file to generate a transcript using OpenAI WHisper
 ## Installation:
 * Setup a VirtualEnvironment or Simply run the command ***pip install -r requirements.txt*** to install the necessary dependencies.
-Make sure you check requirements.txt for the latest version of the dependencies.
-Make sure you have the following installed:
+* Make sure you check requirements.txt for the latest version of the dependencies.
+* Make sure you have the following installed:
 ffmpeg
 rust (for tiktoken)
 gcloud(for google storage)
+* setup your db info and openai API keys, in a file called database.ini
+* setup your google storage keys in a file called google_storage.json
 
 ## Usage:
 
