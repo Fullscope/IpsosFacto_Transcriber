@@ -19,7 +19,7 @@ RUN git clone https://github.com/Fullscope/IpsosFacto_Transcriber.git
 
 
 # Install the required Python packages
-RUN pip install -r requirements.txt
+RUN pip install -r ./requirements.txt
 
 # Expose the default Streamlit port
 EXPOSE 8501
