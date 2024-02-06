@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y \
     curl \
     software-properties-common \
     git \
+    ffmpeg\
     && rm -rf /var/lib/apt/lists/*
 
 # Set the working directory to /app
